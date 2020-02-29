@@ -2,24 +2,34 @@
 <html>
   <head lang="en">
     <title>Pomodoro Clock</title>
+    <link class="icon_img" rel="icon" href="pomodoro.ico" type="image/x-icon">
     <link rel="stylesheet" href="pomodoro.css"/>
   </head>
   <body>
-    <div class="container">
-      <div class="traffic_container">
-        <div class="circle" color="red"></div>
-        <div class="circle" color="yellow"></div>
-        <div class="circle" color="green"></div>
-      </div>
-      <div class="info_container">
-        <h1>WORK</h1>
-        <h1>25:00 MIN</h1>
-        <div class="menu_container"
-        </div>
-        <div class="progress_container"
-        </div>
-      </div>
-    </div>
+    <svg
+     class="progress-ring"
+     width="400"
+     height="400">
+    <circle class="progress-ring__circle fifth circle_style"
+      r="182"/>
+
+    <circle class="progress-ring__circle forth circle_style"
+      r="162"/>
+
+    <circle class="progress-ring__circle third circle_style"
+      r="142"/>
+
+    <circle class="progress-ring__circle second circle_style"
+      r="122"/>
+
+    <circle class="progress-ring__circle first circle_style"
+            r= "102"/>
+    <h1 id="timer"></h1>
+  </svg>
+  <div class="menu_container">
+    <button type="button" onclick="startTimer()">Start</button>
+    <button type="button" onclick="resetTimer()">Restart</button>
+  </div>
   </body>
   <script src="pomodoro.js"></script>
 </html>
